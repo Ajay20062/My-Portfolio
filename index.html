@@ -1,465 +1,273 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Ajay Dharrsan | Portfolio</title>
-        <link rel="stylesheet" href="style.css">
-        <script src="script.js" defer></script>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajay Dharrsan | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
 
+<body>
 
-    <body>
-        <nav>
+    <nav>
+        <div class="nav-left">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+        </div>
 
-            <h2>Ajay.</h2>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
 
-            <ul>
+        <ul id="navList">
+            <li><a href="#home" data-tab="home.html">home<span class="ext">.html</span></a></li>
+            <li><a href="#about" data-tab="about.md">about<span class="ext">.md</span></a></li>
+            <li><a href="#skills" data-tab="skills.json">skills<span class="ext">.json</span></a></li>
+            <li><a href="#projects" data-tab="projects">projects<span class="ext">/</span></a></li>
+            <li><a href="#education" data-tab="education.log">education<span class="ext">.log</span></a></li>
+            <li><a href="#contact" data-tab="contact.sh">contact<span class="ext">.sh</span></a></li>
+        </ul>
+    </nav>
 
-                <li>
-                    <a href="#home">Home</a>
-                </li>
-
-                <li>
-                    <a href="#about">About</a>
-                </li>
-
-                <li>
-                    <a href="#skills">Skills</a>
-                </li>
-
-                <li>
-                    <a href="#projects">Projects</a>
-                </li>
-
-                <li>
-                    <a href="#education">Education</a>
-                </li>
-
-                <li>
-                    <a href="#contact">Contact</a>
-                </li>
-
-            </ul>
-
-        </nav>
-
-        <section class="hero" id="home">
-
-            <div class="hero-content">
-
-                <h3>Hello, I'm</h3>
-
-                <h1>
-                    Ajay <span>Dharrsan</span>
-                </h1>
-
-                <p>
-                    B.Tech Computer Science Student &
-                    Full-Stack Web Developer
-                </p>
-
-                <div class="hero-buttons">
-
-                    <a href="#projects"
-                    class="btn btn-primary">
-                        View My Projects
-                    </a>
-
-                    <a href="#contact"
-                    class="btn btn-outline">
-                        Contact Me
-                    </a>
-
-                </div>
-
+    <section class="hero" id="home">
+        <div class="terminal">
+            <div class="terminal-bar">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+                <span class="terminal-title">ajay@portfolio: ~</span>
             </div>
+            <div class="terminal-body">
+                <p class="line"><span class="prompt">ajay@dev</span><span class="path">:~$</span> <span class="typed" id="typedLine">whoami</span><span class="cursor">▌</span></p>
+                <div class="output" id="terminalOutput">
+                    <p class="out-name">Ajay <span class="hl">Dharrsan</span></p>
+                    <p class="out-role">// B.Tech Computer Science student & full-stack web developer</p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">./view-projects</a>
+                        <a href="#contact" class="btn btn-outline">./contact-me</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        </section>
+    <section class="section" id="about">
+        <p class="eyebrow">// 01_about-me</p>
+        <h2 class="section-title">About Me</h2>
+        <p class="section-subtitle">Get to know me</p>
 
-        <section class="section" id="about">
-
-            <h2 class="section-title">
-                About Me
-            </h2>
-
-            <p class="section-subtitle">
-                Get to know me
+        <div class="about-container reveal">
+            <p>
+                I am a passionate Computer Science and Engineering student
+                interested in software development and full-stack web
+                development.
             </p>
-
-            <div class="about-container">
-
-                <p>
-                    I am a passionate Computer Science and
-                    Engineering student interested in
-                    software development and full-stack
-                    web development.
-                </p>
-
-                <p>
-                    I enjoy building websites and applications
-                    using modern technologies and continuously
-                    improving my programming skills.
-                </p>
-
-                <p>
-                    My goal is to become a skilled software
-                    developer and build useful, scalable and
-                    user-friendly applications.
-                </p>
-
-            </div>
-
-        </section>
-
-        <section class="section" id="skills">
-
-            <h2 class="section-title">
-                My Skills
-            </h2>
-
-            <p class="section-subtitle">
-                Technologies I work with
-            </p>
-
-
-            <div class="skills">
-
-                <div class="skill">
-
-                    <div class="skill-title">
-                        <span>Java</span>
-                        <span>90%</span>
-                    </div>
-
-                    <div class="skill-bar">
-                        <div class="skill-progress java"></div>
-                    </div>
-
-                </div>
-
-
-                <div class="skill">
-
-                    <div class="skill-title">
-                        <span>HTML</span>
-                        <span>95%</span>
-                    </div>
-
-                    <div class="skill-bar">
-                        <div class="skill-progress html"></div>
-                    </div>
-
-                </div>
-
-
-                <div class="skill">
-
-                    <div class="skill-title">
-                        <span>CSS</span>
-                        <span>90%</span>
-                    </div>
-
-                    <div class="skill-bar">
-                        <div class="skill-progress css"></div>
-                    </div>
-
-                </div>
-
-
-                <div class="skill">
-
-                    <div class="skill-title">
-                        <span>JavaScript</span>
-                        <span>85%</span>
-                    </div>
-
-                    <div class="skill-bar">
-                        <div class="skill-progress javascript"></div>
-                    </div>
-
-                </div>
-
-
-                <div class="skill">
-
-                    <div class="skill-title">
-                        <span>Node.js</span>
-                        <span>80%</span>
-                    </div>
-
-                    <div class="skill-bar">
-                        <div class="skill-progress node"></div>
-                    </div>
-
-                </div>
-
-
-                <div class="skill">
-
-                    <div class="skill-title">
-                        <span>MongoDB</span>
-                        <span>75%</span>
-                    </div>
-
-                    <div class="skill-bar">
-                        <div class="skill-progress mongodb"></div>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <section class="section">
-
-            <h2 class="section-title">
-                What I Do
-            </h2>
-
-            <p class="section-subtitle">
-                Areas I'm interested in
-            </p>
-
-
-            <div class="cards">
-
-                <div class="card">
-
-                    <h3>Web Development</h3>
-
-                    <p>
-                        Creating responsive and modern
-                        websites using HTML, CSS and
-                        JavaScript.
-                    </p>
-
-                </div>
-
-
-                <div class="card">
-
-                    <h3>Java Development</h3>
-
-                    <p>
-                        Developing Java applications while
-                        learning object-oriented programming,
-                        collections and advanced Java concepts.
-                    </p>
-
-                </div>
-
-
-                <div class="card">
-
-                    <h3>Full-Stack Development</h3>
-
-                    <p>
-                        Building complete applications with
-                        frontend, backend and database
-                        technologies.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <section class="section" id="projects">
-
-            <h2 class="section-title">
-                My Projects
-            </h2>
-
-            <p class="section-subtitle">
-                Some of my development work
-            </p>
-
-
-            <div class="cards">
-
-
-                <div class="project-card">
-
-                    <h3>
-                        Java OCP Dashboard
-                    </h3>
-
-                    <p>
-                        A Java learning dashboard containing Java OCP topics, notes, MCQs and programming concepts.
-                    </p>
-
-                    <a href="https://github.com/Ajay20062/Java_OCP" class="project-btn">
-                        View Project
-                    </a>
-
-                </div>
-
-
-                <div class="project-card">
-
-                    <h3>
-                        Full-Stack Web Application
-                    </h3>
-
-                    <p>
-                        A full-stack application combining a modern frontend with backend services and database integration.
-                    </p>
-
-                    <a href="#"
-                    class="project-btn">
-                        View Project
-                    </a>
-
-                </div>
-
-
-                <div class="project-card">
-
-                    <h3>
-                        Personal Portfolio
-                    </h3>
-
-                    <p>
-                        A responsive portfolio website created using HTML, CSS and JavaScript to showcase my skills and projects.
-                    </p>
-
-                    <a href="#home" class="project-btn">
-                        Current Project
-                    </a>
-
-                </div>
-
-
-            </div>
-
-        </section>
-
-        <section class="section" id="education">
-
-            <h2 class="section-title">
-                Education
-            </h2>
-
-            <p class="section-subtitle">
-                My academic journey
-            </p>
-
-
-            <div class="education">
-
-
-                <div class="education-item">
-
-                    <h3>
-                        B.Tech - Computer Science and Engineering
-                    </h3>
-
-                    <p>
-                        S.R.M. Institute of Science &
-                        Technology, Chennai
-                    </p>
-
-                    <p>
-                        Currently pursuing
-                    </p>
-
-                </div>
-
-
-                <div class="education-item">
-
-                    <h3>
-                        Higher Secondary - Class XII
-                    </h3>
-
-                    <p>
-                        Velammal Vidhyashram, Surapet
-                    </p>
-
-                    <p>
-                        CBSE | 2024
-                    </p>
-
-                </div>
-
-
-                <div class="education-item">
-
-                    <h3>
-                        Secondary - Class X
-                    </h3>
-
-                    <p>
-                        Genesis International School
-                    </p>
-
-                    <p>
-                        CBSE | 2022
-                    </p>
-
-                </div>
-
-
-            </div>
-
-        </section>
-
-        <section class="section" id="contact">
-
-            <h2 class="section-title">
-                Contact Me
-            </h2>
-
-            <p class="section-subtitle">
-                Let's connect and build something great
-            </p>
-
-
-            <div class="contact-box">
-
-                <p>
-                    📧 Email:
-                    <a href="mailto:your-email@gmail.com">
-                        ajaydharrsan@gmail.com
-                    </a>
-                </p>
-
-                <p>
-                    💻 GitHub:
-                    <a href="https://github.com/Ajay20062?tab=repositories" target="_blank">
-                        GitHub Profile
-                    </a>
-                </p>
-
-                <p>
-                    🔗 LinkedIn:
-                    <a href="https://www.linkedin.com/in/ajay-dharrsan/" target="_blank">
-                        LinkedIn Profile
-                    </a>
-                </p>
-                <p>
-                    📱 Phone:
-                    <a href="tel:+918106635475">
-                        +91 8106635475
-                    </a>
-                </p>
-
-            </div>
-
-        </section>
-
-        <footer>
 
             <p>
-                &copy; 2026 Ajay Dharrsan.
-                All Rights Reserved.
+                I enjoy building websites and applications using modern
+                technologies and continuously improving my programming
+                skills.
             </p>
 
-        </footer>
-    </body>
-    
+            <p>
+                My goal is to become a skilled software developer and build
+                useful, scalable and user-friendly applications.
+            </p>
+        </div>
+    </section>
+
+    <section class="section" id="skills">
+        <p class="eyebrow">// 02_my-skills</p>
+        <h2 class="section-title">My Skills</h2>
+        <p class="section-subtitle">Technologies I work with</p>
+
+        <div class="skills">
+
+            <div class="skill reveal">
+                <div class="skill-title">
+                    <span>"java"</span>
+                    <span>90%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress java" data-width="90"></div>
+                </div>
+            </div>
+
+            <div class="skill reveal">
+                <div class="skill-title">
+                    <span>"html"</span>
+                    <span>95%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress html" data-width="95"></div>
+                </div>
+            </div>
+
+            <div class="skill reveal">
+                <div class="skill-title">
+                    <span>"css"</span>
+                    <span>90%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress css" data-width="90"></div>
+                </div>
+            </div>
+
+            <div class="skill reveal">
+                <div class="skill-title">
+                    <span>"javascript"</span>
+                    <span>85%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress javascript" data-width="85"></div>
+                </div>
+            </div>
+
+            <div class="skill reveal">
+                <div class="skill-title">
+                    <span>"node"</span>
+                    <span>80%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress node" data-width="80"></div>
+                </div>
+            </div>
+
+            <div class="skill reveal">
+                <div class="skill-title">
+                    <span>"mongodb"</span>
+                    <span>75%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress mongodb" data-width="75"></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section">
+        <p class="eyebrow">// 03_what-i-do</p>
+        <h2 class="section-title">What I Do</h2>
+        <p class="section-subtitle">Areas I'm interested in</p>
+
+        <div class="cards">
+
+            <div class="card reveal">
+                <span class="card-dot blue"></span>
+                <h3>Web Development</h3>
+                <p>Creating responsive and modern websites using HTML, CSS and JavaScript.</p>
+            </div>
+
+            <div class="card reveal">
+                <span class="card-dot orange"></span>
+                <h3>Java Development</h3>
+                <p>Developing Java applications while learning object-oriented programming, collections and advanced Java concepts.</p>
+            </div>
+
+            <div class="card reveal">
+                <span class="card-dot green"></span>
+                <h3>Full-Stack Development</h3>
+                <p>Building complete applications with frontend, backend and database technologies.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section" id="projects">
+        <p class="eyebrow">// 04_my-projects</p>
+        <h2 class="section-title">My Projects</h2>
+        <p class="section-subtitle">Some of my development work</p>
+
+        <div class="cards">
+
+            <div class="project-card reveal">
+                <div class="file-tab">
+                    <span class="file-dot orange"></span>
+                    <span class="file-name">JavaOCPDashboard.java</span>
+                </div>
+                <h3>Java OCP Dashboard</h3>
+                <p>A Java learning dashboard containing Java OCP topics, notes, MCQs and programming concepts.</p>
+                <a href="https://github.com/Ajay20062/Java_OCP" class="project-btn" target="_blank">View Project</a>
+            </div>
+
+            <div class="project-card reveal">
+                <div class="file-tab">
+                    <span class="file-dot blue"></span>
+                    <span class="file-name">FullStackApp.js</span>
+                </div>
+                <h3>Full-Stack Web Application</h3>
+                <p>A full-stack application combining a modern frontend with backend services and database integration.</p>
+                <a href="#" class="project-btn">View Project</a>
+            </div>
+
+            <div class="project-card reveal">
+                <div class="file-tab">
+                    <span class="file-dot green"></span>
+                    <span class="file-name">Portfolio.html</span>
+                </div>
+                <h3>Personal Portfolio</h3>
+                <p>A responsive portfolio website created using HTML, CSS and JavaScript to showcase my skills and projects.</p>
+                <a href="#home" class="project-btn">Current Project</a>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section" id="education">
+        <p class="eyebrow">// 05_education</p>
+        <h2 class="section-title">Education</h2>
+        <p class="section-subtitle">My academic journey</p>
+
+        <div class="education">
+
+            <div class="education-item reveal">
+                <p class="edu-tag">[ current ]</p>
+                <h3>B.Tech - Computer Science and Engineering</h3>
+                <p>S.R.M. Institute of Science &amp; Technology, Chennai</p>
+                <p class="edu-meta">Currently pursuing</p>
+            </div>
+
+            <div class="education-item reveal">
+                <p class="edu-tag">[ 2024 ]</p>
+                <h3>Higher Secondary - Class XII</h3>
+                <p>Velammal Vidhyashram, Surapet</p>
+                <p class="edu-meta">CBSE</p>
+            </div>
+
+            <div class="education-item reveal">
+                <p class="edu-tag">[ 2022 ]</p>
+                <h3>Secondary - Class X</h3>
+                <p>Genesis International School</p>
+                <p class="edu-meta">CBSE</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section" id="contact">
+        <p class="eyebrow">// 06_contact-me</p>
+        <h2 class="section-title">Contact Me</h2>
+        <p class="section-subtitle">Let's connect and build something great</p>
+
+        <div class="contact-box reveal">
+            <p class="contact-line"><span class="cmd">email</span><a href="mailto:ajaydharrsan@gmail.com">ajaydharrsan@gmail.com</a></p>
+            <p class="contact-line"><span class="cmd">github</span><a href="https://github.com/Ajay20062?tab=repositories" target="_blank">github.com/Ajay20062</a></p>
+            <p class="contact-line"><span class="cmd">linkedin</span><a href="https://www.linkedin.com/in/ajay-dharrsan/" target="_blank">linkedin.com/in/ajay-dharrsan</a></p>
+            <p class="contact-line"><span class="cmd">phone</span><a href="tel:+918106635475">+91 8106635475</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Ajay Dharrsan. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
 </html>
